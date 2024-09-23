@@ -15,5 +15,10 @@ const config: Config = {
     },
   },
   plugins: [],
+  safelist: [
+    'bg-emerald-800',
+    'bg-amber-800',
+    'bg-cyan-800',
+  ],
 };
 export default config;
