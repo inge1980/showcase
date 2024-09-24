@@ -1,5 +1,5 @@
 'use client';
-import Navbar from '@/components/navbar';
+import Navigation from '@/components/navigation';
 import React, { useState } from 'react';
 import Card from '@/components/card';
 import { useTheme } from "@/context/themecontext";
@@ -8,9 +8,9 @@ const Hooks = () => {
   const { theme, toggleTheme } = useTheme();
   const [backgroundColor, setBackgroundColor] = useState('cyan');
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-baseline justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="block align-top items-baseline justify-items-center min-h-screen pb-20 font-[family-name:var(--font-geist-sans)]">
       <main className={"w-full flex flex-col row-start-2 bg-" + backgroundColor + "-800 items-center sm:items-start"}>
-        <Navbar />
+        <Navigation />
 
         <div className="grid grid-cols-4 gap-4 flex items-start mx-3 py-3">
           <Card title="Alert" desc="Click, and see what happens.." button="Alert click" clickHandler={() => alert('testing click')} />
