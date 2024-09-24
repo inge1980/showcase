@@ -29,7 +29,7 @@ export default function ThemeWrapper({ children}: ThemeWrapperProps) {
     }
 
     return (
-        <div className={(appliedTheme === "light" ? "light-theme" : "dark-theme") + ` block align-top items-baseline justify-items-center min-h-screen pb-20 font-[family-name:var(--font-geist-sans)]`}>
+        <div className={(appliedTheme === "light" ? "light-theme" : "dark-theme") + ` block align-top items-baseline justify-items-center min-h-screen px-5 font-[family-name:var(--font-geist-sans)]`}>
             {children}
         </div>
     );

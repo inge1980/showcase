@@ -8,7 +8,7 @@ const Hooks = () => {
   const { theme, toggleTheme } = useTheme();
   const [backgroundColor, setBackgroundColor] = useState('cyan');
   return (
-    <main className={"w-full flex flex-col row-start-2 bg-" + backgroundColor + "-800 items-center sm:items-start"}>
+    <main className={"w-full flex flex-col row-start-2 bg-" + backgroundColor + "-800 items-center sm:items-start h-screen"}>
       <Navigation />
 
       <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 flex items-start mx-3 py-3">
