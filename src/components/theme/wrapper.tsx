@@ -3,13 +3,11 @@
 import { ReactNode, useState, useLayoutEffect } from "react";
 import { useTheme } from "@/context/themecontext"; // get theme info
 
-interface BodyWithThemeProps {
+interface ThemeWrapperProps {
     children: ReactNode;
-    geistSans: { variable: string };
-    geistMono: { variable: string };
 }
 
-export default function BodyWithTheme({ children, geistSans, geistMono }: BodyWithThemeProps) {
+export default function ThemeWrapper({ children}: ThemeWrapperProps) {
     const { theme: defaultTheme } = useTheme(); // Fallback theme from useTheme
     const [appliedTheme, setAppliedTheme] = useState<"light" | "dark" | null>(null); // Use null to delay rendering
 
@@ -31,8 +29,8 @@ export default function BodyWithTheme({ children, geistSans, geistMono }: BodyWi
     }
 
     return (
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased ` + (appliedTheme === "light" ? "light-theme" : "dark-theme")}>
+        <div className={(appliedTheme === "light" ? "light-theme" : "dark-theme")}>
             {children}
-        </body>
+        </div>
     );
 }

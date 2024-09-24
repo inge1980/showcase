@@ -13,10 +13,10 @@ const Hooks = () => {
         <Navigation />
 
         <div className="grid grid-cols-4 gap-4 flex items-start mx-3 py-3">
-          <Card title="Alert" desc="Click, and see what happens.." button="Alert click" clickHandler={() => alert('testing click')} />
-          <Card title="Not a thing" desc="Just an empty button" button="Nothing.."/>
+          <Card title="Alert" desc="Click to se an alert" button="Alert click" clickHandler={() => alert('Click alert')} />
+          <Card title="Console.log" desc="Seemingly no action, but it is hidden" button="Nothing..?" clickHandler={() => console.log('Hidden from plain view, but developers know..')} />
           <Card title="useState" desc={`Toggle page color only.. (${backgroundColor})`} button="Toggle!" clickHandler={() => { setBackgroundColor(backgroundColor === 'cyan' ? 'amber' : 'cyan'); }} />
-          <Card title="useContext" desc={`Toggle theme color.. (${theme === "light" ? "light" : "dark"})`} button="Toggle!" clickHandler={() => { toggleTheme(); }} />
+          <Card title="useContext" desc={`and useLayoutEffect Toggle theme color: ${theme === "light" ? "light" : "dark"}`} button="Toggle!" clickHandler={() => { toggleTheme(); }} />
         </div>
       </main>
     </div>
